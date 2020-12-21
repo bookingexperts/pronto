@@ -68,6 +68,10 @@ module Pronto
       end
     end
 
+    def prefix
+        ENV['PRONTO_PREFIX'] || @config_hash['prefix']
+    end
+
     def logger
       @logger ||= begin
         verbose = ENV['PRONTO_VERBOSE'] || @config_hash['verbose']

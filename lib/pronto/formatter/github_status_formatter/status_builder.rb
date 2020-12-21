@@ -19,10 +19,14 @@ module Pronto
         end
 
         def context
-          "pronto/#{@runner.title}"
+          [config.prefix, @runner.title].compact.join('/')
         end
 
         private
+
+        def config
+          @config ||= Config.new
+        end
 
         def failure?
           @messages.any? { |message| failure_message?(message) }

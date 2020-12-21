@@ -36,6 +36,7 @@ module Pronto
       'max_warnings' => nil,
       'warnings_per_review' => DEFAULT_WARNINGS_PER_REVIEW,
       'verbose' => false,
+      'prefix' => 'pronto',
       'format' => DEFAULT_MESSAGE_FORMAT
     }.freeze
 
